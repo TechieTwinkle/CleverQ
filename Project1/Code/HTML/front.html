@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleverQ</title>
+    <link rel="icon" href="../png/logo.png" type="image/png">
+    <style>
+        
+        header {
+            background-color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 15px 15px;
+            font-size: 30px;
+        }
+
+        nav ul li a {
+            color: rgb(7, 41, 121);
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            border-color: #6986a8; 
+            box-shadow: 0 4px 20px #1d0f774d; 
+        }
+
+        .image {
+            background-image: url("https://static.vecteezy.com/system/resources/previews/000/098/341/original/free-question-mark-background-vector.jpg"); 
+            max-width: 100%;
+            height: 300px;
+            margin-top: 20px;
+            background-size: cover;
+        }
+        .image:hover {
+            border-color: #6986a8; 
+            box-shadow: 0 4px 20px #0012b34d; 
+        }
+        .box {
+            width: 75%;
+            height: 400px;
+            margin: 30px auto;
+            padding: 20px;
+            border: 2px solid black;
+            background-image: url("https://wallpapertag.com/wallpaper/full/6/7/b/568982-most-popular-cool-colorful-backgrounds-1080x1920-1080p.jpg");
+            background-size: cover;
+            border-radius: 10px; 
+        }
+        .box:hover {
+            border-color: #636dc8; 
+            box-shadow: 0 4px 20px #57048a4d; 
+        }
+        img {
+            max-width: 100%;
+            border-radius: 5px; 
+        
+        }
+        .abc {
+            width: 95%;
+            height: 600px;
+            margin-top: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            border: 2px solid black;
+            background-image: url("https://wallpaperaccess.com/full/2384075.jpg");
+            border-radius: 10px; 
+            box-shadow: 2px 2px 10px #0000001a; 
+        }
+        .collapsible {
+            margin: 20px;
+        }
+
+        .toggle-button {
+            cursor: pointer;
+            font-size: 25px;
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 10px 15px;
+            outline: none;
+            width: 100%; 
+            text-align: center; 
+        }
+
+        .content {
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 50px;
+            color: #3c02b0;
+            display: none; 
+        }
+
+        details[open] .content {
+            display: block; 
+            font-size: 20px;
+        }
+        .khushi{
+            width: 65%;
+            height: 100px;
+            margin: 30px auto;
+            padding: 20px;
+            border: 5px;
+            border-style:outset;
+            border-color: #21035f; 
+
+        }
+        .pic1{
+            height: 250px;
+            width: 250px;
+            gap: 20px;
+            position:absolute;
+            top: 2100px;
+            left: 150px;
+            border: 2px solid transparent;
+        }
+        .pic1:hover{
+            border-color: #636dc8; 
+            box-shadow: 0 4px 20px rgba(87, 4, 138, 0.3);
+            display: inline;
+         }
+         .pic2{
+            height: 250px;
+            width: 250px;
+            gap: 20px;
+            position:absolute;
+            top: 2100px;
+            left: 500px;
+            border: 2px solid transparent;
+            display :inline;
+        }
+        .pic2:hover{
+            border-color: #636dc8; 
+            box-shadow: 0 4px 20px rgba(87, 4, 138, 0.3);
+            display: inline;
+         }
+         .pic3{
+            height: 270px;
+            width: 250px;
+            gap: 20px;
+            position:absolute;
+            top: 2100px;
+            left: 800px;
+            border: 2px solid transparent;
+            display: inline;
+        }
+        .pic3:hover{
+            border-color: #636dc8; 
+            box-shadow: 0 4px 20px rgba(87, 4, 138, 0.3);
+         }
+         .pic4{
+            height: 250px;
+            width: 250px;
+            gap: 20px;
+            position:absolute;
+            top: 2100px;
+            left: 1100px;
+            border: 2px solid transparent;
+            display: inline;
+        }
+        .pic4:hover{
+            border-color: #636dc8; 
+            box-shadow: 0 4px 20px rgba(87, 4, 138, 0.3);
+         }
+         
+         /* Image animation replacing marquee */
+         .sliding-image-container {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+         }
+         
+         .sliding-image {
+            animation: slide 15s linear infinite;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+         
+         @keyframes slide {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+         }
+
+</style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                
+                <li><a href="signin.html">Sign in</a></li>
+                <li><a href="#section1">About Us</a></li>
+                <li><a href="brainy.html">Meet your Quiz Friend</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="image">
+        <h1 style="font-size: 100px; position: absolute ;top: 150px; left:550px; margin-top: 20px; color: #0d0020;">CleverQ</h1>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: flex-start; margin-top: 20px;">
+        <div style="margin-left: 300px;">
+            <h1 style="color: rgb(24, 10, 125);">"I had No Idea</h1>
+            <h1 style="color: rgb(24, 10, 125); margin-top: 10px; margin-left: 200px;">CleverQ could do this"</h1>
+            <h2 style="margin-left: 100px;">-Almost Everybody</h2>
+        </div>
+        <img src="https://img.pixers.pics/pho_wat(s3:700/FO/58/15/21/48/700_FO58152148_62810b7113182d4c19ba257e0f85e579.jpg,700,700,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,650,jpg)/stickers-question-mark.jpg.jpg" alt="quiz" width="400" height="400" style="margin-left: 100px;">
+    </div>
+    <div class="box">
+    <center><h1 style="color: #21035f;">Why is it important to incorporate quizzes into study routines?</h1></center><br>
+    <center><p style=" margin-right:10px; color: rgb(15, 14, 14); font-size: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Makes Studying Fun: Quizzes turn studying into a game show experience.<br><br>
+        Host Your Own Game: Each question is a chance to "win" knowledge.<br><br>
+        Catch Escaping Facts: Helps you remember important information.<br><br>
+        Brain Workout: Engaging with tricky questions strengthens mental agility.<br><br>
+        Excitement of Knowledge: Shouting "I know this one!" feels rewarding.<br><br>
+        Encourages Active Learning: Promotes interaction and participation in studying.</p></center></div>
+        <center><h1 style="margin-top: 120px; font-size: 50px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Frequently asked questions</h1></center>
+    <details class="collapsible">
+        <summary class="toggle-button">Is the Quiz suitable for all ages?</summary> 
+        <div class="content">
+        <center><h3>Yes, CleverQ offers quizzes tailored to different age groups, ensuring that everyone can find appropriate content, from children to adults.</h3></center>
+    </div>
+    </details>
+    <details class="collapsible">
+        <summary class="toggle-button">Is there a cost to use CleverQ?</summary> 
+        <div class="content">
+        <center><h3>No, CleverQ is completely free to use. Users can access a wide range of quizzes and features without any charges.</h3></center>
+    </div>
+    </details>
+    <details class="collapsible">
+        <summary class="toggle-button">How does the quiz companion feature work?</summary> 
+        <div class="content">
+        <center><h3>Yes, CleverQ offers quizzes tailored to different age groups, ensuring that everyone can find appropriate content, from children to adults.</h3></center>
+    </div>
+    </details>
+    <details class="collapsible">
+        <summary class="toggle-button">What topics are covered in the quizzes?</summary> 
+        <div class="content">
+        <center><h3>The quiz companion provides hints, tips, and personalized feedback during quizzes, helping users improve their knowledge and skills as they play.</h3></center>
+    </div>
+    </details>
+    <div class="khushi">
+        <center><p style=" color: blue; font-size: 30px; margin-top: 10px; margin-left: 0px;">"Knowledge is a treasure,</p> 
+            <p style=" color: blue; font-size: 30px; margin-left:150px;">and quizzes are the map."</p></center>
+    </div>
+        <div class="abc">
+            <center><h1 id="section1" style=" margin-top: 1px;font-size: 50px; color: aliceblue; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">CleverQ</h1>
+            <div class="pic1">
+                <div class="sliding-image-container">
+                    <img class="sliding-image" src="../jpg/science.jpg" alt="Science">
+                </div>
+            </div>
+            <div class="pic2">
+                <div class="sliding-image-container">
+                    <img class="sliding-image" src="../jpg/art.jpg" alt="art">
+                </div>
+            </div>
+            <div class="pic3">
+                <div class="sliding-image-container">
+                    <img class="sliding-image" src="../jpg/HISTORY.jpg" alt="gk">
+                </div>
+            </div>
+            <div class="pic4">
+                <div class="sliding-image-container">
+                    <img class="sliding-image" src="../jpg/maths.jpg" alt="My Image">
+                </div>
+            </div>
+        <p style=" margin-top: 400px; font-size: 30px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: rgb(7, 14, 92);">CleverQ is your go-to quiz destination for all ages! Dive into a world of fun quizzes on everything from history to pop culture. Challenge yourself, compete with friends, or just enjoy a solo game. With fresh content and a lively vibe, CleverQ turns learning into an exciting adventure!</p>
+</body>
+</html>

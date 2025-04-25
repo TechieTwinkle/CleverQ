@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://img.freepik.com/premium-photo/blue-question-mark-random-pattern-background-illustration_103740-566.jpg?w=1060");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.quiz-container {
+    width: 400px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative; 
+}  
+
+.quiz-container:hover {
+    transform: translateY(-5px);
+}
+
+#video-container {
+    margin: 15px 0;
+}
+
+.option {
+    background-color: #f4f4f4; 
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.option:hover {
+    background-color: #d9edf7; 
+    transform: scale(1.02);
+}
+
+.button-container, .final-button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    background-color: #6c757d;
+    transition: background-color 0.3s, transform 0.2s;
+    flex: 1;
+}
+
+button:hover {
+    background-color: #5a6268; 
+    transform: scale(1.05);
+}
+
+.small-button {
+    padding: 10px 15px;
+    flex: 0 0 auto; 
+}
+#next-button {
+    margin-left: auto; 
+}
+
+#submit-button {
+    padding: 10px 10px;
+    flex: 1;
+    font-weight: bold;
+}
+
+#question {
+    color: #333; 
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    text-shadow: none; 
+} 
+
+button:focus, input:focus {
+    outline: none; 
+    border: none; 
+} 
+
+button:focus, input:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5); 
+}
+
+#timer-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #333;
+}
+
+#timer {
+    margin-right: 10px;
+}
+
+.fas.fa-clock {
+    font-size: 1.5em;
+    color: #6c757d; /* Match the clock icon color to the hint button */
+}
+
+#hint-video-container {
+    display: none; 
+    margin-left: 20px;
+    position: absolute;
+    top: 50px; 
+    left: -350px; /* Position the video on the left side of the quiz container */
+    width: 250px;
+    height: 0px;
+    z-index: 2;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#hint-button {
+    position: absolute;
+    left: -80px; 
+    background-color: #6c757d; /* Grey color matching the clock */
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+   
+}
+
+#hint-button:hover {
+    background-color: #5a6268;
+    transform: scale(1.05);
+}
+
+#hint-button:focus {
+    outline: none;
+}
+
+#hint-button i {
+    margin-right: 8px;
+}
+
+#hint-button span {
+    font-size: 14px;
+}
+#hint-text-container {
+    margin-top: 10px;
+    display: none; /* Hide by default */
+    font-size: 1.1em;
+    color: #333;
+    background-color: #f7f7f7;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Modal background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with transparency */
+    overflow: auto;
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; /* Adjust width */
+    max-width: 600px;
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Hint content styling */
+#modal-hint-content {
+    text-align: center;
+    font-size: 1.2em;
+}
+

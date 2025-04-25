@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleverQ</title>
+    <link rel="icon" href="../png/logo.png" type="image/png">
+    <link rel="stylesheet" href="../css/entertainment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+
+</head>
+<body>
+    <div class="quiz-container">
+        
+        <div id="timer-container">
+            <button id="message-button" class="small-button">Cheer Me Up</button>
+            <button id="hint-button" class="small-button">Hint</button>
+           
+            <span id="timer">60</span>
+            <i class="fas fa-clock"></i> 
+        </div>
+        <h2 id="question"></h2>
+        <div id="video-container"></div>
+        <div id="hint-video-container" style="display:none;"></div> 
+        <div id="options"></div>
+        <div class="button-container">
+            <button id="next-button" class="small-button">Next</button>
+        </div>
+        <div class="final-button-container">
+            <button id="submit-button">Submit</button>
+        </div>
+    </div>
+    <div id="hint-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-hint-content"></div>
+        </div>
+    </div>
+    
+
+    
+    <script src="../JS/entertainment.js"></script>
+    <script>
+        const modal = document.getElementById('hint-modal');
+        const closeModal = document.querySelector('.modal .close');
+        const hintButton = document.getElementById('hint-button');
+        const modalHintContent = document.getElementById('modal-hint-content');
+        
+
+        hintButton.addEventListener('click', () => {
+            const currentQuestion = questions[currentQuestionIndex];
+    
+        
+            if (currentQuestion.hint && currentQuestion.hint.type === "image_and_text") {
+            
+                modalHintContent.innerHTML = `
+                    <img src="${currentQuestion.hint.src}" alt="Hint image" width="350" />
+                    <p>${currentQuestion.hint.text}</p>
+                `;
+            } else if (currentQuestion.hint && currentQuestion.hint.type === "image") {
+                modalHintContent.innerHTML = `<img src="${currentQuestion.hint.src}" alt="Hint image" width="450" />`;
+            } else if (currentQuestion.hint && currentQuestion.hint.type === "text") {
+                modalHintContent.innerHTML = `<p>${currentQuestion.hint.text}</p>`;
+            } else if (currentQuestion.hint && currentQuestion.hint.type === "video") {
+                modalHintContent.innerHTML = `<video width="350" controls>
+                    <source src="${currentQuestion.hint.src}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>`;
+            }
+    
+        
+            modal.style.display = "block";
+        });
+    
+        
+        closeModal.addEventListener('click', () => {
+            modal.style.display = "none";
+        });
+    
+        
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CleverQ</title>
+    <link rel="icon" href="../png/logo.png" type="image/png">
+    <style>
+        body {
+            background-image: url("../jpg/image.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 630px;
+        }
+        .box {
+            width: 300px;
+            margin: 200px 250px; 
+            text-align: center; 
+            padding: 20px;
+            color: rgb(255, 245, 255);
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+        }
+        input {
+            display: block;
+            margin: 10px auto;
+        }
+        .box:hover {
+            border-color: #6986a8; 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+        }
+        @media (max-width: 768px) {
+            .box {
+                width: 90%;
+                margin: 50px auto;
+                padding: 15px;
+            }
+
+            input {
+                width: 90%;
+                padding: 8px;
+            }
+
+            button {
+                width: 100%;
+                padding: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .box {
+                width: 95%;
+                padding: 12px;
+                margin-top: 30px;
+            }
+
+            input {
+                width: 100%;
+                padding: 8px;
+            }
+
+            button {
+                width: 100%;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+
+        .error-message {
+            color: red;
+            font-size: 12px;
+        }
+
+        .signup-link {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #ddd;
+        }
+
+        .signup-link a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Login</h1>
+        <form id="login-form" onsubmit="return validateLoginForm()">
+            <label for="email">Mail ID:</label>
+            <input type="text" id="email" name="email" placeholder="Mail ID" size="25" />
+            <div id="email-error" class="error-message"></div>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Password" size="25" />
+            <div id="password-error" class="error-message"></div>
+
+            <button type="submit">Login</button>
+
+            <div class="signup-link">
+                <p>Don't have an account? <a href="http://127.0.0.1:5500/Html/signin.html">Sign Up here</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function validateLoginForm() {
+            let email = document.getElementById('email').value;
+            let password = document.getElementById('password').value;
+
+            let isValid = true;
+
+            
+            document.getElementById('email-error').textContent = '';
+            document.getElementById('password-error').textContent = '';
+
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        
+            if (!email) {
+                document.getElementById('email-error').textContent = 'Email is required.';
+                isValid = false;
+            } else if (!emailPattern.test(email)) {
+                document.getElementById('email-error').textContent = 'Please enter a valid email address.';
+                isValid = false;
+            }
+
+            
+            if (!password) {
+                document.getElementById('password-error').textContent = 'Password is required.';
+                isValid = false;
+            }
+
+            
+            if (!isValid) {
+                return false;
+            }
+
+            
+            window.location.href = 'http://127.0.0.1:5500/Html/agepage.html'; 
+            return false;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "cleverq-quiz-website",
+  "version": "1.0.0",
+  "description": "CleverQ - An Interactive Quiz Website",
+  "scripts": {
+    "start": "npx serve",
+    "build": "mkdir -p public && cp -r HTML JS css png mp4 jpg vercel.json public/"
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+} 

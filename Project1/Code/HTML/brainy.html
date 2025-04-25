@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleverQ</title>
+    <link rel="icon" href="../png/logo.png" type="image/png">
+    <style>
+        
+        body {
+            background-image: url("https://media.istockphoto.com/id/1428792471/video/questions-marks-animated-4k-chroma-key-loopable.jpg?s=640x640&k=20&c=NVrrUbjIsROPtezyXovnQA96E7p5i9MV_vvdZDSOVnA=");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+            margin: 0;
+            font-family: 'Poppins', sans-serif; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #111; 
+            opacity: 0.85;
+        }
+
+        
+        .brainy {
+            background-color: #ffffff;
+            border: 4px dashed #333; 
+            border-radius: 20px;
+            padding: 30px;
+            width: 90%;  
+            max-width: 600px; 
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden; 
+            transition: transform 0.3s ease;
+        }
+        .brainy:hover{
+            transform: scale(1.02);
+    
+        }
+
+        
+        video {
+            width: 220px;
+            height: 160px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 3px solid #333; 
+        }
+        
+
+        
+        #fv {
+            font-style: italic;
+            font-size: 50px;
+            color: #201E43;
+           
+        }
+
+        .brainy h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #111; 
+            text-transform: uppercase;
+        }
+
+        .brainy h2 p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .brainy h2 p span {
+            font-weight: bold;
+            color: #FF4081; 
+        }
+
+        
+        a {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: #FF4081; 
+            color: #fff;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        a:hover {
+            background-color: #201E43; 
+            color: #fff;
+            transform: scale(1.05);
+        }
+        .fun-fact-button {
+            background-color: #FF4081;
+            color: white;
+            padding: 15px 15px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .fun-fact-button:hover {
+            background-color: #201E43;
+            transform: scale(1.05);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="brainy">
+        <h1 id="fv">Quiz With Brainy</h1>
+        <h1>"Meet your Brainy"</h1>
+        <video controls autoplay muted loop>
+            <source src="../mp4/Meet brainy.mp4" type="video/mp4">
+        </video>
+        <h2>
+            <p>I'm Brainy, your friendly quiz companion!<br>
+            Just like my name suggests, I'm all about wits and fun!<br>
+            With my vast knowledge and sharp wit, I'm here to guide you through an exciting journey of questions and challenges.<br><br>
+            Fun facts about me:<br><br>
+            - My favorite game is "<span>20 Questions</span>." Can you guess what I'm thinking?<br>
+            - I can help you study or just have a fun quiz night with friends.<br>
+            - I believe learning should always be entertaining, and I have plenty of jokes up my sleeve to keep the mood light!
+            So, let’s dive in and discover just how smart you really are!
+            </p>
+        </h2>
+        <button class="fun-fact-button" id="show-fun-fact-button">Show Fun Fact</button>
+        <a href="http://127.0.0.1:5500/Html/front.html">Go to Home Page</a>
+    </div>
+    <script>
+        
+        const funFacts = [
+            "Honey never spoils. Archaeologists have found pots of honey in ancient tombs that are over 3,000 years old and still edible.",
+            "A group of flamingos is called a 'flamboyance'.",
+            "Bananas are berries, but strawberries aren't!",
+            "Cows have best friends and can become stressed when separated from them.",
+            "There are more stars in the universe than grains of sand on all of Earth's beaches.",
+            "Wombat poop is cube-shaped, which helps it stay in place and mark its territory.",
+            "Octopuses have three hearts and blue blood.",
+            "Sloths can hold their breath for up to 40 minutes underwater.",
+            "A day on Venus is longer than a year on Venus.",
+            "The Eiffel Tower can grow taller by 15 cm in the summer due to the expansion of the metal in heat."
+        ];
+
+        
+        function displayRandomFunFact() {
+            const randomIndex = Math.floor(Math.random() * funFacts.length);
+            const randomFact = funFacts[randomIndex];
+            alert(randomFact); 
+        }
+
+        
+        document.getElementById('show-fun-fact-button').addEventListener('click', displayRandomFunFact);
+    </script>
+</body>
+</html>

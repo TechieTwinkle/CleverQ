@@ -1,0 +1,119 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Welcome to CleverQ, a fun quiz platform for all ages.">
+    <meta name="keywords" content="quiz, trivia, fun, games, children, learning">
+    <title>CleverQ</title>  
+    <link rel="icon" href="../png/logo.png" type="image/png">
+    <style> 
+        body { 
+            margin: 0; 
+            height: 90vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            background-image: url("https://www.shutterstock.com/shutterstock/photos/2052894734/display_1500/stock-vector-quiz-and-question-marks-trivia-night-quiz-symbol-neon-sign-night-online-game-with-questions-2052894734.jpg"); 
+            font-family: 'Montserrat', sans-serif; 
+            color: white; 
+            padding: 20px; 
+        } 
+
+        .title { 
+            font-size: 4rem; 
+            color: white; 
+            padding: 20px; 
+            border: 5px solid white; 
+            border-radius: 10px; 
+            background-color: rgba(0, 0, 0, 0.5); 
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7); 
+            transition: transform 0.3s ease; 
+        } 
+
+        .title:hover { 
+            transform: scale(1.05); 
+        } 
+
+        .btn-container { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            width: 100%; 
+            margin-top: 20px; 
+        } 
+
+        .btn { 
+            background: #ff68a5;  
+            border-radius: 25px; 
+            color: white; 
+            padding: 15px 30px; 
+            margin: 10px 0; 
+            font-size: 1.5rem; 
+            cursor: pointer; 
+            transition: transform 0.2s, box-shadow 0.2s; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+            position: relative; 
+            overflow: hidden; 
+        } 
+
+        .btn::before { 
+            content: ''; 
+            position: absolute; 
+            top: 50%; 
+            left: 50%; 
+            width: 300%; 
+            height: 300%; 
+            background: rgba(255, 255, 255, 0.2); 
+            border-radius: 50%; 
+            transition: all 0.6s; 
+            transform: translate(-50%, -50%) scale(0); 
+            z-index: 0; 
+        } 
+
+        .btn:hover::before { 
+            transform: translate(-50%, -50%) scale(1); 
+        } 
+
+        .btn:hover { 
+            background: #ff4e7a; 
+            transform: translateY(-3px); 
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); 
+        } 
+
+        footer { 
+            position: absolute; 
+            bottom: 20px; 
+            left: 43%; 
+            color: white; 
+            font-size: 1rem; 
+        } 
+
+        @media (max-width: 600px) { 
+            .title { 
+                font-size: 2.5rem; 
+            } 
+
+            .btn { 
+                font-size: 1.2rem; 
+                padding: 10px 20px; 
+            } 
+        } 
+    </style> 
+</head> 
+
+<body> 
+    <h1 class="title">Let's Get Started!</h1> 
+    <div class="btn-container"> 
+        <a href="http://127.0.0.1:5500/Html/entertainment.html" class="btn" aria-label="Entertaintment">Entertaintment</a> 
+        <a href="http://127.0.0.1:5500/Html/sports.html" class="btn" aria-label="Sports">Sports</a> 
+        <a href="http://127.0.0.1:5500/Html/general.html" class="btn" aria-label="General">General</a> 
+        <a href="http://127.0.0.1:5500/Html/puranic.html" class="btn" aria-label="Puranic Literature">Puranic Literature</a> 
+    </div> 
+
+    <footer> 
+        &copy; 2024 CleverQ. All rights reserved. 
+    </footer> 
+</body> 
+</html>
